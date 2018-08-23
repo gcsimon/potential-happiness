@@ -12,7 +12,7 @@ public class HelloController {
     public String index() {
 		LocalTime currentTime = new LocalTime();
 		LocalDate localDate = new LocalDate();
-        return "Greetings from Spring Boot! " + localDate + " " + currentTime;
+        return "Greetings from Spring Boot! " + localDate + " " + currentTime.getHourOfDay() + "h" + currentTime.getMinuteOfHour();
     }
 	
 	
