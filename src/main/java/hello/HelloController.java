@@ -9,7 +9,8 @@ import org.joda.time.LocalDate;
 public class HelloController {
 
     @RequestMapping("/data")
-    public String index() {
+   
+   public String dateAndTime() {
 		String minutes = "";
 		LocalTime currentTime = new LocalTime();
 		LocalDate localDate = new LocalDate();
