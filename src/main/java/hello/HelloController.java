@@ -10,14 +10,15 @@ public class HelloController {
 
     @RequestMapping("/data")
     public String index() {
+		String minutes = "";
 		LocalTime currentTime = new LocalTime();
 		LocalDate localDate = new LocalDate();
-        return "Greetings from Spring Boot! " + localDate + " " + currentTime.getHourOfDay() + "h" + currentTime.getMinuteOfHour();
+		minutes = "0" + currentTime.getMinuteOfHour();
+		if(minutes.length() != 2)
+			minutes = minutes.substring(1,3);
+		
+        return localDate + " " + currentTime.getHourOfDay() + "h" + minutes;
     }
 	
 	
-	
-	
-	
-
 }
